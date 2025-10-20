@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeMaster Desafios - Desafio do Dia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>CodeMaster Desafios</h1>
+        <nav>
+            <a href="#">Desafios</a>
+            <a href="#">Ranking</a>
+            <a href="#">Blog</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="desafio-do-dia">
+            <h2>Desafio do Dia: Contador de Vogais</h2>
+            <p class="nivel-badge">Nível: Iniciante | Tópico: Strings</p>
+
+            <div class="enunciado">
+                <h3>Enunciado do Problema</h3>
+                <p>Crie uma função que receba uma string (palavra ou frase) e retorne o número total de vogais (a, e, i, o, u) que ela contém, desconsiderando a capitalização.</p>
+
+                <h4>Exemplo:</h4>
+                <p><strong>Entrada:</strong> "Programacao"</p>
+                <p><strong>Saída Esperada:</strong> 5</p>
+            </div>
+
+            <div class="area-codigo">
+                <h3>Sua Solução (Pseudocódigo)</h3>
+                <textarea id="codigo-usuario" placeholder="// Comece a codificar aqui..."></textarea>
+                <button onclick="enviarCodigo()">Testar/Enviar</button>
+            </div>
+
+            <div class="solucao-container">
+                <button class="btn-solucao" onclick="mostrarSolucao()">Ver Solução Oficial (spoiler!)</button>
+                <pre id="solucao-oficial" class="solucao-oculta">
+function contarVogais(str) {
+    // Converte para minúsculas para simplificar a contagem
+    str = str.toLowerCase();
+    let contador = 0;
+    const vogais = 'aeiou';
+
+    for (let char of str) {
+        if (vogais.includes(char)) {
+            contador++;
+        }
+    }
+    return contador;
+}
+
+// Teste:
+console.log(contarVogais("Programacao")); // Saída: 5
+                </pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CodeMaster Desafios. Pratique, Aprenda, Domine.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
